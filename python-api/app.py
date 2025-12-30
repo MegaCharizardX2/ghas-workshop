@@ -43,10 +43,9 @@ def init_db():
 def get_user(user_id):
     conn = get_db_connection()
     try:
-        # VULNERABLE: Direct string concatenation in SQL query
-        query = "SELECT * FROM users WHERE id = " + user_id
+        # SECURE: Using parameterized query with placeholder
         cursor = conn.cursor()
-        cursor.execute(query)
+        cursor.execute("SELECT * FROM users WHERE id = ?", (user_id,))
         user = cursor.fetchone()
         if user:
             return jsonify(dict(user))
