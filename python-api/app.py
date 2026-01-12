@@ -143,7 +143,14 @@ def get_user_safe(user_id):
 @app.route('/health')
 def health():
     return jsonify({"status": "healthy"})
-
+@app.route('/api/execute')
+def execute_code():
+    code = request.args.get('code', '')
+    # VULNERABLE: User input passed directly to exec
+    exec(code)
+    return jsonify({"status": "executed"})
 if __name__ == '__main__':
     init_db()
     app.run(host='0.0.0.0', port=5000, debug=True)
+eval(input())
+eval(input())
