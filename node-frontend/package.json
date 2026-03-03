@@ -14,7 +14,7 @@
     "axios": "0.21.0",
     "minimist": "1.2.0",
     "node-fetch": "2.6.0",
-    "serialize-javascript": "2.1.0",
+    "serialize-javascript": "7.0.3",
     "jquery": "2.2.4",
     "handlebars": "4.5.0",
     "marked": "0.7.0",
