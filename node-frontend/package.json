@@ -16,7 +16,7 @@
     "node-fetch": "2.6.0",
     "serialize-javascript": "2.1.0",
     "jquery": "2.2.4",
-    "handlebars": "4.5.0",
+    "handlebars": "4.7.9",
     "marked": "0.7.0",
     "moment": "2.19.2",
     "underscore": "1.8.3",
